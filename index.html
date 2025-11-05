@@ -1,0 +1,169 @@
+<!<!doctype html>
+ 
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Restaurante - Gastronomia Moçambicana </title>
+  <style>
+    :root{--accent:#b7410e;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;margin:0;color:#222}
+    header{background:linear-gradient(90deg,var(--accent),#d97706);color:#fff;padding:28px 18px}
+    .container{max-width:980px;margin:0 auto;padding:18px}
+    nav{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .logo{font-weight:700;font-size:1.2rem}
+    .navlinks a{color:rgba(255,255,255,0.95);text-decoration:none;padding:8px;border-radius:8px}
+    .navlinks a:hover{background:rgba(0,0,0,0.08)}
+    main{padding:28px 0}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+    .hero h1{margin:0 0 8px;font-size:2rem}
+    .muted{color:var(--muted)}
+    .card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .dish{padding:12px;border-radius:8px;border:1px solid #eee}
+    .dish h4{margin:0 0 6px}
+    footer{padding:18px;background:#f7f7f7;color:#333;margin-top:28px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;background:var(--accent);color:#fff}
+    section{display:none}
+    section.active{display:block}
+    form label{display:block;margin:10px 0 6px;font-weight:600}
+    input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid:#ddd}
+    .small{font-size:.9rem;color:var(--muted)}
+    @media(min-width:720px){.hero{grid-template-columns:1fr 360px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Gastronomia Moçambicana</div>
+        <div style="flex:1"></div>
+        <div class="navlinks">
+          <a href="#" data-link="home">INICIO</a>
+          <a href="#" data-link="menu">MENU</a>
+          <a href="#" data-link="about">SOBRE</a>
+          <a href="#" data-link="reservas">RESERVAS</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="active">
+      <div class="hero">
+        <div>
+          <h1>Gastronomia Moçambicana</h1>
+          <p class="muted"> Seja Bem-vindo ao restaurante que ira te fazer provar  dos sabores nativos 
+            Com chefes como :
+            <p>O Chefe Felizardo e O chefe Ali</p>
+            <strong>Gastronomia Moçambicana</strong>. Aqui celebramos ingredientes locais e receitas tradicionais com um toque moderno.</p>
+          <div style="margin-top:14px">
+            <a class="btn" data-action="go" data-target="reservas">Fazer reserva</a>
+            <a style="margin-left:8px;text-decoration:none;padding:10px 14px;border-radius:8px;border:1px solid #ddd;color:#333" data-action="go" data-target="menu">Ver Menu</a>
+          </div>
+        </div>
+        <div><div class="card"></div></div>
+      </div>
+      <div style="margin-top:22px" class="card">
+        <h3> A nossa obrigaçao é :</h3>
+        <p>Combinarmos técnicas contemporâneas com sabores tradicionais moçambicanos — mariscos, piri-piri, coco e especiarias. Este é um projeto pedagógico para praticar desenvolvimento web: mostraremos páginas interligadas, um menu, história do restaurante e um sistema simples de reservas.</p>
+      </div>
+    </section>
+
+    <section id="menu">
+      <h2>Menu principal</h2>
+      <p class="muted">Pratos típicos e fictícios com preços demonstrativos.</p>
+      <div class="menu-grid" style="margin-top:12px">
+        <div class="dish card"><h4>Caril de Camarão</h4><p class="small">Camarões cozidos num molho cremoso de coco e piri-piri.</p><p><strong>Preço:</strong> 450 MZN</p></div>
+        <div class="dish card"><h4>Matapa Especial</h4><p class="small">Folhas de mandioca com amendoim e marisco.</p><p><strong>Preço:</strong> 319 MZN</p></div>
+        <div class="dish card"><h4>Piri-Piri Frango</h4><p class="small">Frango grelhado com molho piri-piri caseiro.</p><p><strong>Preço:</strong> 190 MZN</p></div>
+        <div class="dish card"><h4>Arroz de Mariscos</h4><p class="small">Arroz cremoso com mistura de frutos do mar.</p><p><strong>Preço:</strong> 260 MZN</p></div>
+      </div>
+      <div style="text-align:center;margin-top:15px;">
+        <a href="#" class="btn" data-link="home">🔙 Voltar</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>Sobre o restaurante</h2>
+      <p class="muted">História </p>
+Sabores de Moçambique é um restaurante fictício em Maputo, fundado por Aida, que serve pratos tradicionais como xima, frango grelhado e polvo assado. Famoso pelo ambiente acolhedor e sabores autênticos, combina tradição e inovação Cada prato é pensado para encantar clientes e contar a história da culinária moçambicana -</p>
+      <p class="muted"> Missão</p>
+        A missão do restaurante fictício Gastronomia Mocambicana é:  
+Preservar e valorizar a culinária moçambicana, proporcionando aos clientes experiências gastronômicas autênticas que combinam tradição, sabor e cultura local, em um ambiente acolhedor e inovador -</p>
+      <div class="card" style="margin-top:20px">
+        <h3>Trabalho da 11ª Classe — Grupo "A1"</h3>
+        <ul>
+          
+        
+          <li>N⁰ 2</li>
+          <li>Nº 3</li>
+          <li>Nº 23</li>
+          <li>Nº 32</li>
+          <li>Nº 35</li>
+          <li>Nº 49</li>
+          <li>Nº 52</li>
+          <li>N ⁰ 62</li>
+          <li> N⁰ 63</li>
+          <li> N⁰ 66</li>
+        </ul>
+        <div style="text-align:center; margin-top:15px;">
+          <a href="#" class="btn" data-link="home">🔙 Voltar</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservas">
+      <h2>Fazer Reserva</h2>
+      <p class="muted">Preencha o formulário abaixo. As reservas são guardadas localmente no seu navegador .</p>
+      <div class="card" style="margin-top:12px">
+        <form id="reservaForm">
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome" required />
+          <label for="data">Data</label>
+          <input id="data" name="data" type="date" required />
+          <label for="hora">Hora</label>
+          <input id="hora" name="hora" type="time" required />
+          <label for="pessoas">Número de pessoas</label>
+          <select id="pessoas" name="pessoas"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select>
+          <label for="observacoes">Observações (opcional)</label>
+          <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+          <div style="margin-top:12px">
+            <button class="btn" type="submit">Enviar reserva</button>
+            <button type="button" style="margin-left:8px;padding:10px;border-radius:8px" id="verReservas">Ver reservas</button>
+          </div>
+        </form>
+        <div id="reservaMsg" style="margin-top:12px"></div>
+        <div id="listaReservas" style="margin-top:12px"></div>
+      </div>
+      <div style="text-align:center; margin-top:15px;">
+        <a href="#" class="btn" data-link="home">🔙 Voltar</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap">
+        <div><strong>Gastronomia Moçambicana</strong></div>
+        <div class="small">© obrigado por sempre nos escolher!</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('[data-link]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();showPage(a.getAttribute('data-link'));}));
+    document.querySelectorAll('[data-action="go"]').forEach(b=>b.addEventListener('click',e=>{showPage(b.dataset.target);}));
+    function showPage(id){document.querySelectorAll('main section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+    const form=document.getElementById('reservaForm');const msg=document.getElementById('reservaMsg');
+    form.addEventListener('submit',e=>{e.preventDefault();const data={nome:form.nome.value.trim(),data:form.data.value,hora:form.hora.value,pessoas:form.pessoas.value,observacoes:form.observacoes.value,timestamp:Date.now()};
+      const arr=JSON.parse(localStorage.getItem('reservas')||'[]');arr.push(data);localStorage.setItem('reservas',JSON.stringify(arr));msg.innerHTML='<div class="small">Reserva registada com sucesso — verifique em "Ver reservas".</div>';form.reset();});
+    document.getElementById('verReservas').addEventListener('click',()=>{const arr=JSON.parse(localStorage.getItem('reservas')||'[]');const out=document.getElementById('listaReservas');if(!arr.length){out.innerHTML='<div class="small">Sem reservas.</div>';return}
+      out.innerHTML='';arr.slice().reverse().forEach(r=>{const d=document.createElement('div');d.className='card';d.style.marginBottom='8px';d.innerHTML=`<strong>${escapeHtml(r.nome)}</strong> — <span class="small">${r.data} ${r.hora} • ${r.pessoas} pessoa(s)</span><div class="small">${escapeHtml(r.observacoes||'')}</div>`;out.appendChild(d)});});
+    function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+    showPage('home');
+  </script>
+</body>
+</html>
+
+ 
